@@ -1,0 +1,25 @@
+<div class="timepicker">
+    <div class="col" id="hours">
+        <button (click)="incrementTime('hours')"> +</button>
+        <input [value]="time?.hours"
+               (change)="changeTime('hours', $event.target.value)"
+        />
+        <button (click)="decrementTime('hours')"> -</button>
+    </div>
+
+    <div class="col" id="minutes">
+        <button (click)="incrementTime('minutes')"> +</button>
+        <input [value]="time?.minutes"
+               (change)="changeTime('minutes', $event.target.value)"
+        />
+        <button (click)="decrementTime('minutes')"> -</button>
+    </div>
+
+    <div class="col" id="seconds">
+        <button (click)="incrementTime('seconds')"> +</button>
+        <input [value]="time?.seconds"
+               (change)="changeTime('seconds', $event.target.value)"
+        />
+        <button (click)="decrementTime('seconds')"> -</button>
+    </div>
+</div>
